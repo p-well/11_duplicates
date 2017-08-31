@@ -14,19 +14,19 @@ def find_dublicates(files_list):
     non_dublicated_files = []
     for dirpath, file, filesize in files_list:
         if (file, filesize) in non_dublicated_files:
-            dublicated_files.append(os.path.join(dirpath, file))
+            dublicated_files.append((dirpath, file))
         else:
-            non_dublicated_files.append((file, filesize))
+            non_dublicated_files.append((file,filesize))
     return dublicated_files
 	
 if __name__ == '__main__':
     
-    all_files_in_tree = get_files_list('C:\')
+    all_files_in_tree = get_files_list('C:\projects\ptest_folder')
     dublicated_files = find_dublicates(all_files_in_tree)
 	
     if len(dublicated_files) == 0:
         print('No dublicated files have been found in this directory tree.')
     else:
-        print('The following files are dublicates:')
+        print('\nThe following files are dublicates: \n')
         for dubl_file in dublicated_files:
-            print('Location: {} File name: {}'.format(dubl_file[0], dubl_file[1]))
+            print('Location:{}\tFile:{}'.format(dubl_file[0], dubl_file[1]))
