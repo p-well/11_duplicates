@@ -21,7 +21,13 @@ def find_dublicates(files_list):
     return dublicated_files
 
 def createParser():
-    parser = argparse.ArgumentParser()
+
+    parser = argparse.ArgumentParser(prog = 'Search for duplicates',
+                                     description = '''The script searches for dublicated files
+in current working directory or any other directory (need to specify its absolute path). ''',
+                                     epilog = '''(c) p-well 2017. The author of the program 
+does not bear any responsibility.''')
+
     parser.add_argument('path_to_dir', nargs='?', default = current_dir_path, type=argparse.FileType())
     parsed_dirpath = parser.parse_args()
     return parsed_dirpath
@@ -39,4 +45,3 @@ if __name__ == '__main__':
         print('\nThe following files are dublicates: \n')
         for dubl_file in dublicated_files:
             print('Location: {}\tFile: {}'.format(dubl_file[0], dubl_file[1]))
-            
