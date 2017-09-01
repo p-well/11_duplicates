@@ -15,6 +15,27 @@ To check any other directory specify its absolute path as an additional argument
 
 # Example of Script Launch
 
+Running from current directory:
+
+```The following files are dublicates:
+
+Location: c:\projects\devman\11_duplicates\.git\refs\remotes\origin     File: master```
+
+```c:\projects\devman\11_duplicates>python duplicates.py C:\projects\1_test_folder
+
+The following files are dublicates:
+
+Location: C:\projects\1_test_folder\sub1        File: file1.txt
+Location: C:\projects\1_test_folder\sub2        File: file20.txt
+Location: C:\projects\1_test_folder\sub3        File: file2.txt```
+
+Running with wrong path:
+
+```c:\projects\devman\11_duplicates>python duplicates.py C:\projects\1_test_fold
+
+No such directory, check path and try again```
+
+
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
