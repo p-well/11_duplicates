@@ -20,7 +20,7 @@ def find_dublicates(files_list):
             non_dublicated_files.append((file,filesize))
     return dublicated_files
 
-def createParser():
+def create_parser():
 
     parser = argparse.ArgumentParser(prog = 'Search for duplicates',
                                      description = '''The script searches for dublicated files
@@ -35,7 +35,7 @@ does not bear any responsibility.''')
 if __name__ == '__main__':
 
     current_dir_path = os.getcwd() 
-    parsed_dirpath = createParser()
+    parsed_dirpath = create_parser()
 
     if not os.path.isdir(parsed_dirpath.path_to_dir):
 
@@ -46,7 +46,7 @@ if __name__ == '__main__':
         all_files_in_tree = get_files_list(parsed_dirpath.path_to_dir)
         dublicated_files = find_dublicates(all_files_in_tree)
         
-        if len(dublicated_files) == 0:
+        if not dublicated_files:
             print('\nNo dublicated files have been found in this directory tree.')
         else:
             print('\nThe following files are dublicates: \n')
