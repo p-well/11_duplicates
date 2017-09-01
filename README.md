@@ -1,6 +1,6 @@
 # Anti-Duplicator
 
-The purpose of the script it to find duplicated files in directore tree - files with the same name and size.
+The purpose of the script it to find duplicated files in directory tree - files with the same name and size.
 The script searches for doubles and prints dublicate's path and name.
 
 # Quickstart
@@ -22,6 +22,8 @@ The following files are dublicates:
 
 Location: c:\projects\devman\11_duplicates\.git\refs\remotes\origin     File: master
 ```
+
+Running for another directory:
 
 ```
 c:\projects\devman\11_duplicates>python duplicates.py C:\projects\1_test_folder
