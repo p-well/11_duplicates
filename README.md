@@ -7,23 +7,9 @@ The script searches for doubles and prints dublicate's path and name.
 
 Python 3.5 should be already installed.
 
-To run the script execute ```python duplicates.py``` in CLI. The script will recursively check all files in current directory tree.
-By default the program investigates directory where it's launched.
-
-To check any other directory specify its absolute path as an additional argument when call script:
-```python duplicates.py C:\projects\devman\11_dublicates```.
+To run the script execute ```python duplicates.py <filepath>``` in CLI. The script will recursively check all files in current directory tree.
 
 # Example of Script Launch
-
-Running from current directory:
-
-```
-The following files are dublicates:
-
-Location: c:\projects\devman\11_duplicates\.git\refs\remotes\origin     File: master
-```
-
-Running for another directory:
 
 ```
 c:\projects\devman\11_duplicates>python duplicates.py C:\projects\1_test_folder
@@ -40,7 +26,7 @@ Running with wrong path:
 ```
 c:\projects\devman\11_duplicates>python duplicates.py C:\projects\1_test_fold
 
-No such directory, check path and try again
+Invalid path, try again
 ```
 
 
